@@ -7,6 +7,13 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  public contact={
+    name:"Enset",
+    mail:"soufianemarzouk.2017@gmail.com",
+    tel:"0639211031",
+    logo:"assets/images/logo.png",
+    location:"assets/images/loc.png"
+  }
   constructor() {}
 
 }
