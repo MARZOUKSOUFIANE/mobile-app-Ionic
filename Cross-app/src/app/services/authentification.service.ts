@@ -1,37 +1,38 @@
 import { Injectable } from '@angular/core';
+import * as firebase from 'firebase';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthentificationService {
-  private authenticated: boolean;
-  public token:string;
+
   constructor() { }
 
-  public login(username:string,password:string){
-    if(username =='admin' && password =='123'){
-      this.authenticated=true;
-      this.saveToken();}
-    else
-      this.authenticated=false;
-    return this.authenticated;
-  }
-
-  private saveToken() {
-    this.token='azerty';
-    localStorage.setItem('myToken',this.token)
-  }
-
-  public loadToken(){
-    this.token=localStorage.getItem('myToken');
-    if(this.token=='azerty')
-      this.authenticated=true;
-    else
-      this.authenticated=false;
-    return this.authenticated;
-  }
-
-    logOut() {
-        localStorage.removeItem('myToken');
+    signUpUser(email,password){
+     return new Promise((resolve,reject) =>{
+       firebase.auth().createUserWithEmailAndPassword(email,password)
+           .then(user=>{
+             resolve(user)
+           }).catch(err=>{
+             reject(err);
+       })
+      }
+     )
     }
+
+  signInUser(email,password){
+    return new Promise((resolve,reject) =>{
+          firebase.auth().signInWithEmailAndPassword(email,password)
+              .then(user=>{
+                resolve(user)
+              }).catch(err=>{
+            reject(err);
+          })
+        }
+    )
+  }
+
+  signOut(){
+    firebase.auth().signOut()
+  }
 }

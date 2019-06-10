@@ -1,19 +1,19 @@
 <ion-header>
   <ion-toolbar color="danger">
-    <ion-title>Authentification</ion-title>
+    <ion-title>Create Account</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <form #f="ngForm" (ngSubmit)="onLogin(f.value)">
+  <form #f="ngForm" (ngSubmit)="onCreateUser(f.value)">
     <ion-item>
       <ion-input type="text" name="username" ngModel placeholder="Username"></ion-input>
     </ion-item>
     <ion-item>
       <ion-input type="password" name="password" ngModel placeholder="Password"></ion-input>
     </ion-item>
-    <ion-button expand="block" type="submit">SignIn</ion-button>
+    <ion-button expand="block" type="submit">Save</ion-button>
     <ion-label color="danger" *ngIf="error">{{error}}</ion-label>
-    <ion-button expand="block" fill="outline" (click)="onSignUp()">SignUp</ion-button>
+    <ion-button expand="block" fill="outline" (click)="onSignIn()">SignIn</ion-button>
   </form>
 </ion-content>

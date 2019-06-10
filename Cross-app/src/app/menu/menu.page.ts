@@ -24,7 +24,7 @@ export class MenuPage implements OnInit {
 
   onMenuItem(m){
       if(m.url=='logout') {
-          this.authService.logOut();
+          this.authService.signOut();
           this.router.navigate(['login'])
       }
       else
