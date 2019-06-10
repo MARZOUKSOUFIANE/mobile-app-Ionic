@@ -8,6 +8,63 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
+
 <ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>
+          KeyWord:
+        </ion-label>
+        <ion-input [(ngModel)]="keyWord"></ion-input>
+        <ion-button (click)="onLoadImages()">Ok</ion-button>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-list *ngIf="dataImages">
+      <ion-card *ngFor="let m of dataImages">
+        <ion-card-header>
+          <ion-item>
+            <ion-avatar slot="start">
+              <ion-img [src]="m.userImageURL"></ion-img>
+            </ion-avatar>
+            <ion-label>{{m.user}}</ion-label>
+          </ion-item>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-img [src]="m.previewURL"></ion-img>
+        </ion-card-content>
+        <ion-card-content>
+          <ion-row>
+            <ion-col>
+            <ion-button fill="outline" size="small">
+              <ion-icon name="thumbs-up"></ion-icon>
+              <ion-label>{{m.likes}}</ion-label>
+            </ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button fill="outline" size="small">
+                <ion-icon name="chatbubbles"></ion-icon>
+                <ion-label>{{m.comments}}</ion-label>
+              </ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button fill="outline" size="small">
+                <ion-icon name="download"></ion-icon>
+                <ion-label>{{m.downloads}}</ion-label>
+              </ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+  </ion-list>
+
+  <ion-infinite-scroll (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+            loadingSpinner="bubbles"
+            loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 
 </ion-content>
