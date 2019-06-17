@@ -13,8 +13,9 @@ export class MenuPage implements OnInit {
        {title:"Meteo",url:"/menu/meteo",icon:'snow'},
        {title:"Gallery",url:"/menu/gellery",icon:'photos'},
        {title:"Locations",url:"/menu/locations",icon:'pin'},
-       {title:"Logout",url:"logout",icon:'log-out'}
-       ];
+       {title:"Logout",url:"logout",icon:'log-out'},
+       {title:"Exit",url:"exit",icon:'power'}
+   ];
 
   constructor(private router:Router,private authService:AuthentificationService) { }
 
@@ -26,6 +27,9 @@ export class MenuPage implements OnInit {
       if(m.url=='logout') {
           this.authService.signOut();
           this.router.navigate(['login'])
+      }
+      else if(m.url=='exit') {
+          navigator['app'].exitApp();
       }
       else
       this.router.navigate(['/'+m.url]);
