@@ -4,8 +4,7 @@
 ## Application mobile cross-plateforme avec IONIC 4 Framework et CORDOVA.
 <br>
 
-### ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `#f03c15` Objectifs de l'application:
-
+### <font color="red">Status: **Not yet implemented**</font> Objectifs de l'application:
 #### -Chercher et afficher des images exposeés par l'api "PixaBay"
 #### -Afficher les données de méteo d'une ville donnée en faisant appel au Api "OpenWheather"
 #### -Gerer des places(Restaurant...etc)
@@ -15,7 +14,7 @@
   #####     &nbsp; &nbsp; *Prendre de photos de places en utilisant soit la camera soit le gallery du smartphone.
 <br><br>
 
-### ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `#f03c15` Les points clés de l'application sont:
+### <font color="red">Status: **Not yet implemented**</font> Les points clés de l'application sont:
 ##### -  Un système de navigation basé sur Side menu.
 ##### -  Authentification baséé sur l'api "FireBase".
 ##### -  Interaction avec des API REST.
