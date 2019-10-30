@@ -4,7 +4,8 @@
 ## Application mobile cross-plateforme avec IONIC 4 Framework et CORDOVA.
 <br>
 
-### <span  style="color:red">Status: **Not yet implemented**</span> Objectifs de l'application:
+### Objectifs de l'application:
+-----------------------------------
 #### -Chercher et afficher des images exposeés par l'api "PixaBay"
 #### -Afficher les données de méteo d'une ville donnée en faisant appel au Api "OpenWheather"
 #### -Gerer des places(Restaurant...etc)
@@ -15,6 +16,7 @@
 <br><br>
 
 ###  Les points clés de l'application sont:
+-----------------------------------------------
 ##### -  Un système de navigation basé sur Side menu.
 ##### -  Authentification baséé sur l'api "FireBase".
 ##### -  Interaction avec des API REST.
