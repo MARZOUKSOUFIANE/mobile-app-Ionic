@@ -1,7 +1,8 @@
-# mobile-app-Ionic
+                                                     # mobile application Ionic4
+                                                     
 
 ## Application mobile cross-plateforme avec IONIC 4 Framework et CORDOVA.
-
+<pre>
 ### Objectifs de l'application:
 #### -Chercher et afficher des images exposeés par l'api "PixaBay"
 #### -Afficher les données de méteo d'une ville donnée en faisant appel au Api "OpenWheather"
@@ -10,6 +11,8 @@
  #####       *selectionner ou supprimer des places.
  #####       *Afficher la géolocalisation d'une place sélectionnéé(Google Map).
   #####      *Prendre de photos de places en utilisant soit la camera soit le gallery du smartphone.
+</pre>
+
 
 
 ### Les points clés de l'application sont:
